@@ -1,0 +1,160 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Fundo em Degradê Preto e Branco/Cinza */
+.bg-gradient {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #000000 0%, #2c2c2c 50%, #e0e0e0 100%);
+    z-index: -1;
+}
+
+/* Container Principal */
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding: 60px 20px;
+}
+
+/* Logo Chamativa */
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    color: #fff;
+    text-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.logo span {
+    color: #000000; /* Destaque amarelo para manter a cara de autopeças */
+}
+
+.tagline {
+    font-size: 1.1rem;
+    margin-top: 5px;
+    opacity: 0.8;
+    color: #fff;
+}
+
+/* Card Transparente */
+.card {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+.card h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+/* Botões Transparentes (Ghost Style) */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn {
+    text-decoration: none;
+    color: white;
+    padding: 16px 25px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    background: rgba(255, 255, 255, 0.05); /* Leve fundo branco transparente */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Cores nos ícones para destaque */
+.btn i {
+    font-size: 1.4rem;
+    width: 30px;
+}
+
+.btn-ml i { color: #ffffff; }
+.btn-wp i { color: #ffffff; }
+.btn-ig i { color: #ffffff; }
+
+/* Efeito Hover nos botões */
+.btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.8);
+    transform: translateX(10px); /* Animação lateral */
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #333; /* Escuro para ler sobre o fundo claro de baixo */
+}
+
+/* Animações de Entrada */
+.fade-in {
+    animation: fadeInMove 1s ease-out forwards;
+}
+
+.fade-in-delayed {
+    opacity: 0;
+    animation: fadeInMove 1s ease-out 0.4s forwards;
+}
+
+@keyframes fadeInMove {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    footer { color: #fff; } /* Ajuste de cor no mobile se o degradê mudar */
+}
+
+footer {
+    margin-top: 50px; /* Aumente esse número para empurrar mais para baixo */
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #333; 
+    width: 100%;
+}
+
+
+
+
